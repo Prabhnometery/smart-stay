@@ -5,7 +5,7 @@
   width: 100vw;
 }
 
-.DatePicker > h2 {
+.DatePicker > h4 {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -34,7 +34,7 @@
 .DatePicker > button {
   position: absolute;
   left: 0;
-  top: 480px;
+  top: 430px;
   text-transform: inherit !important;
   background-color: #187bcd;
   color: white;

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Button } from '@material-ui/core';
+import { withRouter } from 'react-router-dom';
 
 import './Banner.css';
 import DatePicker from './DatePicker/DatePicker';
@@ -14,7 +15,13 @@ class Banner extends Component {
         this.setState({showSearch: !this.state.showSearch})
     }
 
+    redirectToHome = () => {
+        this.props.history.push('/search-page')
+    }
+
+
     render() {
+
         return (
         
         <div className='banner'>
@@ -26,11 +33,11 @@ class Banner extends Component {
             <div className='banner_info'>
                 <h1>Get out and stretch your imagination</h1>
                 <h5>Plan a different kind of getaway to uncover the hidden gems near you.</h5>
-                <Button variant='outlined'> Explore Nearby </Button>
+                <Button onClick={this.redirectToHome} variant='outlined'> Explore Nearby </Button>
 
             </div>
         </div>
         )}
 };
 
-export default Banner;
+export default withRouter(Banner);

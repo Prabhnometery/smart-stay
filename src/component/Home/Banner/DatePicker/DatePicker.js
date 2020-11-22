@@ -24,7 +24,7 @@ const DatePicker = () => {
         return (
             <div className='DatePicker'>
                 <DateRangePicker ranges={[selectionRange]} onChange={handleSelect} />
-                <h2>Number of guest <PeopleIcon /> </h2>
+                <h4>Number of guest <PeopleIcon /></h4>
                 <input min={0} defaultValue={2} type='number' />
                 <Button>Search Smart Stay</Button>
 
