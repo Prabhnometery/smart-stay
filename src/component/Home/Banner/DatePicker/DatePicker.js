@@ -5,8 +5,10 @@ import 'react-date-range/dist/theme/default.css';
 import { DateRangePicker } from 'react-date-range'
 import { Button } from '@material-ui/core';
 import PeopleIcon from '@material-ui/icons/People'
+import { useHistory } from 'react-router-dom';
 
 const DatePicker = () => {
+    const history = useHistory();
     const [ startDate, setStartDate ] = useState(new Date());
     const [ endDate, setEndDate ] = useState(new Date());
 
@@ -26,7 +28,7 @@ const DatePicker = () => {
                 <DateRangePicker ranges={[selectionRange]} onChange={handleSelect} />
                 <h4>Number of guest <PeopleIcon /></h4>
                 <input min={0} defaultValue={2} type='number' />
-                <Button>Search Smart Stay</Button>
+                <Button onClick={() => history.push('/search-page')} >Search Smart Stay</Button>
 
             </div>
 
